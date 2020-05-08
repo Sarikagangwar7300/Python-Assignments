@@ -1,0 +1,155 @@
+ASSIGHNMENT-2
+
+
+a)	Domain name and tables. 
+Answer-
+Domain Name-Library Management System
+      Tables- 1.  Students
+                     2. Books
+                     3. Transaction
+     b) Code.
+ Answer-
+import mysql.connector
+mydb=mysql.connector.connect(host="localhost",user="root",passwd="sarika1617")
+c=mydb.cursor()
+c.execute("create database library_management")
+c.execute("use library_management")
+c.execute("create table `students`(""`sid` int primary key," "`sname` varchar(20)," "`pno` varchar(30)"")")
+c.execute("create table `books`(""`bid` int primary key," "`bname` varchar(20)," "`pub` varchar(40)," "`qty` int"")")
+c.execute("create table `trans`(""`id` int primary key," "`bid` int," "`sid` int,""`idate` varchar(40),""`rdate` varchar(50)"")")
+print("students table is created......")
+print("books table is created......")
+print("trans table is created......")
+ 
+import mysql.connector
+mydb=mysql.connector.connect(
+    host="localhost",
+    user="root",
+    passwd="sarika1617"
+)
+c=mydb.cursor()
+c.execute("use library_management")
+class Library:
+    def admin(self):
+        print("\n -- Welcome ADMIN -- \n")
+        while True:
+            ch=int(input("1.Add Book\n2.delete book\n3.Student details\n4.new account\n5.book details\n6.transaction details\n7.update book quantity\n8.exit\nEnter your Choice :"))
+            if(ch==1):
+                while True:
+                    print("\n -- ADD BOOK: -- \n")
+                    bid=int(input("enter bid of book"))
+                    bname=input("enter name of book")
+                    pub=input("enter publication of book")
+                    qty=int(input("enter quantity of book"))
+                    c.execute("insert into books values(%d,'%s','%s',%d)"%(bid,bname,pub,qty))
+                    x=input("do you want to add more books")
+                    if(x.lower()=="no"):
+                        break
+                mydb.commit()
+            elif(ch==2):
+                print("\n -- delete book: -- \n")
+                bid=int(input("enter book id"))
+                c.execute("delete from books where bid=%d"%(bid,))
+                mydb.commit()
+            elif(ch==3):
+                print("\n -- Student details : -- \n")
+                c.execute("select * from students")
+                res=c.fetchall()
+                for i in res:
+                    print(i)
+            elif(ch==4):
+                print("\n -- Creating New Account : -- \n")
+                sid=int(input("Enter the Id :"))
+                sname=input("Enter the s_Name :")
+                pno=int(input("enter your pho:"))
+                c.execute("insert into students values(%d,'%s',%d)"%(sid,sname,pno))
+                mydb.commit()
+            elif(ch==5):
+                print("\n --Book details : -- \n")
+                c.execute("select * from books")
+                res=c.fetchall()
+                for i in res:
+                    print(i)
+            elif(ch==6):
+                print("\n -- Transaction details : -- \n")
+                c.execute("select * from trans")
+                res=c.fetchall()
+                for i in res:
+                    print(i)
+            elif(ch==7):
+                bid=int(input("enter book id you want to update"))
+                a=int(input("enter no of books yo want to add"))
+                c.execute("select * from books where bid=%d"%(bid))
+                records=c.fetchall()
+                qty=int(records[0][3])
+                qty=qty+a
+                c.execute("update books set qty=%d where bid=%d"%(qty,bid))
+                print("quantity  is updated")
+            elif(ch==8):
+                break
+    def student(self):
+            print("\n -- Welcome Student -- \n")
+            sid=int(input("Enter your sid :"))
+            c.execute('select sname from students where sid=%d'%(sid,))
+            res1=c.fetchall()
+            if(res1):
+                n=res1[0][0]
+                print("\n -- Welcome to your account ,",n,' -- \n')
+                while True:
+                    ch1=int(input("1.IssueBook\n2.Return Book\n3.Exit\nEnter your Choice :"))
+                    if(ch1==1):
+                        print("\n -- IssueBook : -- \n")
+                        bid=int(input("enter the id of that book which you want to issue"))
+                        c.execute("select * from books where bid=%d"%(bid,))
+                        records=c.fetchall()
+                        if (records):
+                            a=records[0][0]
+                            if len(records)==0:
+                                mydb.close()
+                                print("NA")
+                            else:
+                                print(records)
+                                print(type(records))
+                                qty=int(records[0][3])
+                            if qty>0:
+                                    print("Issued")
+                                    qty=qty-1
+                                    id=int(input("enter transaction id of book"))
+                                    idate=int(input("enter issue date"))
+                                    #updation of book after issuing it
+                                    c.execute("update books set qty=%d where bid=%d"%(qty,bid))
+                                    c.execute("insert into trans    
+values(%d,%d,%d,%d,'%s')"%(id,bid,sid,idate,"NA"))
+                                    mydb.commit()
+                            else:
+                                    print("NA")
+                    elif(ch1==2):
+                        print("\n -- Return Book : -- \n")
+                        bid=int(input("enter bid of the book u want to return"))
+                        c.execute("select * from books where bid=%d"%(bid))
+                        records=c.fetchall()
+                        qty=int(records[0][3])
+                        qty=qty+1
+                        c.execute("update books set qty=%d where bid=%d"%(qty,bid))
+                        id=int(input("enter trans id of a book u want to return"))
+                        c.execute("select * from trans where id=%d"%(id))
+                        records=c.fetchall()
+                        rdate=int(input("enter return date of book"))
+                        c.execute("update trans set rdate=%d where id=%d"%(rdate,id))
+                        mydb.commit()
+                    elif(ch1==3):
+                        break
+            else:
+                print(" Sorry !!! ID not found .. ")
+print("----- Library MANAGEMENT SYSTEM -----")
+obj=Library()
+while True:
+    ch=int(input("""1.Admin\n2.Student\n3.Exit\nEnter choice :"""))
+    if(ch==1):
+        obj.admin()
+    elif(ch==2):
+        obj.student()
+    elif(ch==3):
+        print("exiting")
+        break
+ 
