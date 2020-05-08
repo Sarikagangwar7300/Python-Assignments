@@ -1,0 +1,1196 @@
+Interactive Programming Through Python
+Assignment-1
+
+QUESTION: 5
+Open the Python IDLE and execute the following commands. Observe the output.
+1)10 + 15
+2)print("Hello World") 
+3)45 - 34
+4)8 * 2
+5)print("Rahul's age is", 45)
+6)print("I have", 10, "mangoes and", 12, "bananas")
+
+Solution:5
+
+1)	25
+2)	Hello World
+3)	11
+4)	16
+5)	Rahul's age is 45
+6)	I have 10 mangoes and 12 bananas
+
+ 
+
+QUESTION: 6
+Open Python IDLE and execute the following commands. Observe the output.
+1.emp_number = 1233 
+2.print("Employee Number:", emp_number)
+3.emp_salary = 16745.50
+4.emp_name = "Jerry Squaris"
+5.print("Employee Salary and Name:", emp_salary, emp_name)
+6.emp_salary = 23450.34
+7.print("Updated Employee Salary:", emp_salary)
+
+Solution:6
+
+2. 1233
+4.Employee Salary and Name: 16745.5 Jerry Squaris
+6.Updated Employee Salary: 23450.34
+ 
+QUESTION: 7
+Execute the following Python statements in IDLE and observe the output:
+•customer_id = 101 
+•type(customer_id)
+•customer_name = "John" 
+•type(customer_name)
+•bill_amount = 675.45 
+•type(bill_amount )
+•x = 5.3 + 0.9j 
+•type(x)
+•print(customer_id, customer_name, bill_amount) 
+•print(x.real) 
+•print(x.imag + 3) 
+•Flag = True
+•type(Flag)
+•y = "False"
+
+Solution:7
+
+1.	<class 'int'>
+2.	<class 'str'>
+3.	<class 'float'>
+4.	<class 'complex'>
+5.	101 John 675.45
+6.	5.3
+7.	3.9
+8.	<class 'bool'>
+
+ 
+
+QUESTION: 8
+In a retail application, shopkeeper wants to keep a track of following details of a customer. Sample values are provided.
+•bill_id = 101
+•customer_id = 1001
+•customer_name = "Rahul"
+•if_minor = False
+•bill_amount = 2000.50
+Write a python program to store the details and display them
+
+Solution:8
+bill_id: 101 
+ customer_id: 1001 
+ customer_name: Rahul 
+ if_minor: False 
+ bill_amount: 2000.5
+
+ 
+
+QUESTION: 9
+Execute the following commands and observe the usage of diﬀerent types of commenting styles.
+i = 10 
+# creates an integer variable. This is a single line comment.
+print("i =", i) 
+# prints 10
+''' 
+Below code creates a Boolean variable in Python
+(This is a multiple line comment)
+'''
+s = True
+print("s =", s) 
+#prints True, Here, s is a Boolean variable with value True
+"""
+Below code assigns string data to variable 's'. Data type of variable can change during execution, 
+Hence, Python supports Dynamic Semantics.
+(This is multi-line comment used for documentation)
+"""
+s = 24
+print("s =", s) 
+#prints 24, Here, s is changed to integer data type with value 24
+
+ 
+
+QUESTION: 10
+Write a Python program for the following requirements:
+•Prompt the user to input two numbers num1 and num2
+•Increment num1 by 4 and num2 by 6
+•Find and print the sum of new values of num1 and num2
+Hint – Use type casting for converting the input into an integer.
+
+Solution:10
+num1 = int(input("enter value of num1:")) 
+num2 = int(input("enter value of num1:"))
+num1 += 4	
+num2 += 6
+sum = (num1) + (num2) 
+print("The sum of num1 and num2 is:",sum)
+
+ 
+
+QUESTION: 11
+1) Consider two variables 'a' and 'b' in Python such that a = 4 and b = 5. Swap the values of 'a' and 'b' without using a temporary variable. Print the values of 'a' and 'b' before and after swapping.
+2)Consider the scenario of processing marks of a student in ABC Training Institute. John, the student of ﬁfth grade takes exams in three diﬀerent subjects. Create three variables to store the marks obtained by John in three subjects. Find and display the average marks scored by John.
+Now change the marks in one of the subjects and observe the output. Did the value of average change?
+3) Given the value of radius of a circle, write a Python program to calculate the area and perimeter of the circle. Display both the values.
+4) The ﬁnance department of a company wants to compute the monthly pay of its employees. Monthly pay shouldbe calculated as mentioned in the formula below. Display all the employee details.
+Monthly Pay = Number of hours worked in a week * Pay rate per hour * No. of weeks in a month
+•The number of hours worked by the employee in a week should be considered as 40
+•Pay rate per hour should be considered as Rs.400 
+•Number of weeks in a month should be considered as 4
+Write a Python program to implement the above real world problem.
+
+Solution(11.1)
+a = 4
+b = 5
+print('The value of a before swapping:',a)
+print('The value of b before swapping:',b)
+a,b = b,a
+print('The value of a after swapping:',a)
+print('The value of b after swapping:',b)
+
+ 
+
+2)
+sub1=int(input("Enter marks of the first subject 1: "))
+sub2=int(input("Enter marks of the second subject 2: "))
+sub3=int(input("Enter marks of the third subject 3: "))
+avg = (sub1+sub2+sub3)/3
+print("the average is:",avg)
+sub2=int(input("Enter new marks of sub2: "))
+avg = (sub1+sub2+sub3)/3
+print("the new average is:",avg)
+ 
+
+
+
+3)
+pi = 3.14
+radius = float(input(' Enter the radius of a circle: '))
+area = pi * radius * radius
+perimeter = 2 * pi * radius
+print(" Area Of a Circle:",area)
+print(" perimeter Of a Circle:",perimeter)
+ 
+
+4)
+number_of_hours = 40
+Pay_rate = 400 
+Number_of_weeks = 4
+Monthly_Pay = number_of_hours  * Pay_rate * Number_of_weeks
+print("number of hours:",number_of_hours)
+print("payrate:",Pay_rate)
+print("no. of weeks:",Number_of_weeks)
+print("monthly pay:",Monthly_Pay)
+ 
+QUESTION: 12Identify the sections of the given program where the coding standards are not followed and correct them.
+itemNo=1005
+unitprice = 250
+quantity = 2
+amount=quantity*unitprice
+print("Item No:", itemNo)
+print("Bill Amount:", amount)
+
+Solution:12
+ 
+
+QUESTION: 13
+Create a new ﬁle in Python IDLE as "triangle.py" 
+•Write a Python program to calculate and print the area of the triangle. Prompt the user to input the values for base and height of the triangle.
+•Execute the program(use 'Run Module' under 'Run' tab) and observe the output.
+•Close the ﬁle, open it again and execute it once more with diﬀerent values. Observe the output.
+Hint – Use type casting for converting the input into an integer.
+Area of a triangle = ½ * base * height
+
+Solution:13
+base = int(input("the base is : "))
+height = int(input("the height is : "))
+Area  = 1/2 * base * height
+print("the area is:",Area)
+ 
+
+QUESTION: 14
+1)Consider the scenario of retail store management again. The store provides discount for all bill amounts based on the criteria below:
+Write a Python program to ﬁnd the net bill amount after discount. Observe the output with diﬀerent values of bill amount. Assume that bill amount will be always greater than zero.
+
+2) Extend the above program to validate the customer id. Customer ids in the range of 101 and 1000 (both inclusive) should only be considered valid.
+Note: Display appropriate error messages wherever applicable
+
+Solution:14
+bill_id =111
+customer_id=35
+bill_amount=400.0
+discounted_bill_amount=0.0
+print("Bill Id:",bill_id)
+print("Customer Id:",customer_id)
+print("Bill Amount:",bill_amount)
+if bill_amount>500:
+    discounted_bill_amount=bill_amount - (bill_amount*2/100)
+else:
+    discounted_bill_amount=bill_amount-(bill_amount*1/100)
+    print("Discounted Bill Amount:",discounted_bill_amount)
+ 
+2)
+bill_id =111
+customer_id=35
+bill_amount=400.0
+discounted_bill_amount=0.0
+print("Bill Id:",bill_id)
+print("Customer Id:",customer_id)
+print("Bill Amount:",bill_amount)
+if ((customer_id > 100) and (customer_id <=1000)) is True:
+    if bill_amount >= 500:
+        discounted_bill_amount = bill_amount-bill_amount *10/100
+        print("Discounted Bill Amount:",iscounted_bill_amount)
+    else:
+        print("No Discount")
+else:
+        print("Invalid Customer id,customer id must between 101 and 1000")
+ 
+
+QUESTION: 15
+Implement the following in Python:
+a. Display all even numbers between 50 and 80 (both inclusive) using "for" loop.
+b.Add natural numbers up to n where n is taken as an input from user. Print the sum.
+c.Prompt the user to enter a number. Print whether the number is prime or not.
+d. Print Fibonacci series till nth term where n is taken as an input from user.
+
+Solution:a
+x=0
+for x in range(50,81):
+    if x%2==0:
+        print(x)
+ 
+
+Solution:b.
+x=int(input('Enter the value for the range:'))
+sum=0
+while x>0:
+    sum=sum+x
+    x-=1
+print('The sum of natural numbers is:',sum)
+ 
+
+Solution:c
+n=int(input('enter a number'))
+if n>1:
+    for i in range(2,n):
+        if(n%i)==0:
+            print(n,"not a Prime number")
+            break
+    else:
+            print(n,"prime number")
+            
+else:
+    print(n,"not a prime number")
+ 
+
+Solution:d
+#Print Fibonacci series till nth term where n is taken as an input from user.
+n=int(input("Enter the value of n:"))
+n1 = 0
+n2 = 1
+count = 0
+if n<= 0:
+   print("Please enter a positive integer")
+elif n == 1:
+   print("Fibonacci sequence upto",n,":",n1)
+else:
+   print("Fibonacci sequence upto",n,":")
+   while count < n:
+       print(n1,end=' , ')
+       nth = n1 + n2
+       # update values
+       n1 = n2
+       n2 = nth
+       count += 1
+ 
+
+QUESTION: 16
+Create four string variables a, b, c, d to store the following values and display them:
+•My city is Mexico
+•Raghu is my friend's brother
+•My favorite programming language is "Python"
+•Python is a widely used high-level, general-purpose, interpreted, dynamic programming language. It's design philosophy emphasizes code readability, and it's syntax allows programmers to express concepts in fewer 
+lines of code than possible in languages such as "C++" or "Java".
+
+Solution:16
+a = "My city is mexico"
+b = "Raghu is my friend's brother"
+c = "My favorite programming language is 'Python' "
+d = "Python is a widely used high-level, general-purpose, interpreted,dynamic programming language.\
+Its design philosophy emphasizes code readability \
+it syntax allows programmers to express concepts in fewer  lines of code than possible in languages\
+such as 'C++' or 'Java'"
+print(a)
+print(b)
+print(c)
+print(d)
+ 
+
+QUESTION: 17
+•Accept a string as an input from the user. Check if the accepted string is palindrome or not. 
+•If the string is palindrome, print "String is palindrome", otherwise print "String is not palindrome". 
+•Also print the actual and the reversed strings.
+Note – Ignore the case of characters.
+Hint – A palindrome string remains the same if the characters of the string are reversed.
+
+Solution:17
+string = input("enter a string:")
+temp=string
+reverse= string[::-1]
+if temp==reverse:
+    print("string is a palindrome")
+else:
+    print("string is not a palindrome")
+
+print("Actual string is:",temp)
+print("Reverse string is:",reverse)
+ 
+
+QUESTION: 18
+Accept two strings 'string1' and 'string2' as an input from the user. Generate a resultant string, such that it is a concatenated string of all upper case alphabets from both the strings in the order they appear. Print the actual and the resultant strings.
+Note: Each character should be checked if it is a upper case alphabet and then it should be concatenated to the resultant string.
+Sample Input:
+string1: I Like C
+string2: Mary Likes Python
+Output: ILCMLP
+Solution:18
+string1 = input("Enter a string: ")
+string2 = input("Enter another string: ")
+result = ""
+for i in string1:
+    if (i.isupper()):
+        result = result + i
+for i in string2:
+    if (i.isupper()):
+        result = result + i
+print("String1: ",string1)
+print("String2: ",string2)
+print(result)
+ 
+
+QUESTION: 19
+Given a string containing both upper and lower case alphabets. Write a Python program to count the number of occurrences of each alphabet (case insensitive) and display the same.
+Sample Input: ABaBCbGc
+
+Sample Output:
+2A
+3B 
+2C
+1G
+Solution:19
+x=input("enter string")
+x=x.upper()
+t={}
+count=0
+t=set(x)
+for i in t:
+    for j in s:
+        if(i==j):
+            count=count+1
+    print(count,i)
+    count=0
+ 
+
+QUESTION: 20
+Write a Python program to accept a string &#39;accepted_string&#39;. Generate a resultant string
+&#39;resultant_string&#39; such that &#39;resultant_string&#39; should contain all characters at the even position
+of &#39;accepted_string&#39;(ignoring blank spaces).
+Display &#39;resultant_string&#39; in reverse order.
+accepted_string: An apple a day keeps the doctor away
+resultant_string: Aapedyepteotrwy
+expected_output: ywrtoetpeydepaA
+Hint: String starts from index 0, hence the starting character is at even position.
+Solution:20
+str1="An apple a day keeps the doctor away"
+str2=str1.replace(" ","")
+a=len(str2)
+print(str2)
+str3=str2[0:a:2]
+print(str3)
+str4=str3[::-1]
+print(str4)
+ 
+QUESTION: 22
+The "Variety Retail Store" sells diﬀerent varieties of Furniture to the customers. The list of furniture available with its respective cost is given below:
+The furniture and its corresponding cost should be stored as a list. A customer can order any furniture in any quantity (the name and quantity of the furniture will be provided). If the required furniture is available in the furniture list(given above) and quantity to be purchased is greater than zero, then bill amount should be calculated. 
+In case of invalid values for furniture required by the customer and quantity to be purchased, display appropriate error message and consider bill amount to be 0. Initialize required furniture and quantity with diﬀerent values and test the results. 
+Write a Python program to calculate and display the bill amount to be paid by the customer based on the furniture bought and quantity purchased.
+Hint – Create two diﬀerent lists for 'Furniture' and 'Cost'. Indices of two lists should be matched to retrieve the cost of a particular furniture.
+
+Solution:22
+furniture=['Sofa_set','Dining_table','T.V.Stand','Cupboard']
+cost=[20000,8500,4599,13920]
+item=input()
+
+if item in furniture:
+    quantity=int(input("enter quantity"))
+    if quantity>0:
+    
+        cost_index=furniture.index(item)
+        cost_item=cost[cost_index]
+        total_cost=cost_item*quantity
+        print(total_cost)
+else:
+    print("Invalid purchase")
+ 
+QUESTION: 23
+Consider the list of courses opted by a Student "John" and available electives at ABC Training Institute: 
+courses = ("Python Programming", "RDBMS", "Web Technology", "Software Engg.")
+electives = ("Business Intelligence", "Big Data Analytics")
+Write a Python Program to satisfy business requirements mentioned below:
+1.List the number of courses opted by John.
+2.List all the courses opted by John.
+3.John is also interested in elective courses mentioned above. Print the updated tuple including electives.
+
+Solution:23
+t = ()
+courses = ("Python Programming", "RDBMS", "Web Technology", "Software Engg.")
+electives = ("Business Intelligence", "Big Data Analytics")
+print("enter 1 for Python Programing\nenter 2 for RDBMS\nenter 3 for Web Technology\nenter 4 Software Engg. ")
+count=0
+while True:
+    count=count+1
+    course=input("enter the course :")
+    if course == '1':
+        t += ('Python Programming',)
+    elif course=='2':
+        t += ('RDBMS',)
+    elif course=='3': 
+        t += ('Web Technology',)
+    elif course=='4':
+        t += ('Soft. Eng.',)
+    y=input("do you want to add more course :")
+    if not(y.lower()=="yes"):
+        break
+x=input("are you interested in electives :")
+if x.lower()=="yes":
+    total_course=count+1
+    elective=input("select 1 for Business Intillengence\nselect 2 for Big Data Analytics")
+    if elective=='1':
+        t+=('Business Intillengence',)
+    if elective=='2':
+        t+=('Big Data Analytics',)
+total_course=count+1
+print("no of course opt by john is :",total_course)
+print("the courses are opted by jhon are :",t)
+ 
+QUESTION: 24
+Given below is a dictionary 'customer_details' representing customer details from a Retail Application. Customer Id 
+is the key and Customer Name is the value. 
+customer_details = { 1001 : "John", 1004 : "Jill", 1005: "Joe", 1003 : "Jack" }
+Write Python code to perform the operations mentioned below:
+
+a)Print details of customers.
+b)Print number of customers.
+c)Print customer names in ascending order.
+d)Delete the details of customer with customer id = 1005 and print updated dictionary.
+e)Update the name of customer with customer id = 1003 to "Mary" and print updated dictionary.
+f)Check whether details of customer with customer id = 1002 exists in the dictionary.
+
+Solution:24
+customer_details = { 1001 : "John", 1004 : "Jill", 1005: "Joe", 1003 : "Jack" }
+for k,v in customer_details.items():
+    print("details of",v,"is",k)
+print(len(customer_details.values()))
+for i in sorted(customer_details.values()):
+    print(i)
+del customer_details[1005]
+print(customer_details)
+customer_details[1003]='Marry'
+print(customer_details)
+
+ 
+QUESTION: 25
+Consider a scenario from ABC Training Institute. The given table shows the marks scored by students of grade XI in Python Programming course. 
+Write a Python program to meet the requirements mentioned below:
+a. Display the name and marks for every student.
+b. Display the top two scorers for the course.
+c. Display class average of this course.
+Hint- Implement the solution using a dictionary.
+
+Solution:25
+details={"john":86.5,"jack":91.2,"jill":84.5,"harry":72.1,"joe":80.5}
+for k,v in details.items():
+    print(k,"has marks",v)
+top1=max(details.values())
+print(top1)
+for x in details.values():
+    if top1 not in details.values():
+        if max<x:
+            max=x
+print("top2 of the class is",max)
+avg=(sum(details.values()))/len(details.values())
+print(avg)
+
+ 
+
+QUESTION: 26
+Consider the scenario from "Variety Retail Store" discussed in 'List' section. The list of furniture available with its respective cost is given below:
+A customer can order any furniture in any quantity. If the required furniture is available in the furniture list(given above) and quantity to be purchased is greater than zero, then bill amount should be calculated. In case of invalid values for furniture required by the customer and quantity to be purchased, display appropriate error message and consider bill amount to be 0. Initialize required furniture and quantity with diﬀerent values and test the results. 
+Calculate and display the bill amount to be paid by the customer based on the furniture bought and quantity purchased. Implement the given scenario using:
+1)List of tuples
+2)Dictionary
+
+Solution:26
+
+furniture=['Sofa set','Dining Table','T.V Stand','Cupboard']
+cost=[20000,8500,4599,13920]
+furname=input("Enter name of furniture you want to buy\t")
+quantity=int(input("Enter quantity\t"))
+if(furname in furniture and quantity>0):
+    index1=furniture.index(furname)
+    amt=cost[index1]
+    price= quantity*amt
+    print("Bill amount to be paid is Rs.",price)
+else:
+    if(quantity==0 or quantity<0):
+        print(" Bill amount to be paid is 0")
+    if(furname not in furniture):
+        print("Invalid demand of furniture,this item is not in stock,Enter a valid item and try again")
+        print("Bill amount to be paid is zero") 
+QUESTION: 27
+Consider a scenario from ABC Training Institute. Given below are two Sets representing the names of students enrolled for a particular course:
+java_course = {"John", "Jack", "Jill", "Joe"}
+python_course = {"Jake", "John", "Eric", "Jill"}
+Write a Python program to list the number of students enrolled for:
+1)Python course
+2)Java course only
+3)Python course only
+4)Both Java and Python courses
+5)Either Java or Python courses but not both
+6)Either Java or Python courses
+
+Solution:27
+java_course = {"John", "Jack", "Jill", "Joe"}
+python_course = {"Jake", "John", "Eric", "Jill"}
+print("Students enroll in python course",python_course)
+print("Students enroll in java course only",java_course.difference(python_course))
+print("Students enroll in python course only",python_course.difference(java_course))
+print("Enrolled inn both python and java",java_course.intersection(python_course))
+print("Enrolled in either java or python but not both",java_course.symmetric_difference(python_course))
+print("Enrolled in either java or python courses",java_course.union(python_course))
+ 
+QUESTION: 28
+Using functions, re-write and execute Python program to:
+1.Add natural numbers upto n where n is taken as an input from user.
+2.Print Fibonacci series till nth term (Take input from user).
+Note: You have implemented these programs using loops earlier.
+
+Solution:1)
+n=int(input("enter value of n"))
+i=0
+sum=0
+while i<=n:
+    sum=sum+i
+    i=i+1
+print("sum of n natural numbers is",sum)
+    
+ 
+Solution:2)
+n=int(input("Enter the value of n:"))
+def Fibonacci(n):
+    n1 = 0
+    n2 = 1
+    count = 0
+    if n<= 0:
+       print("Please enter a positive integer")
+    elif n == 1:
+       print("Fibonacci sequence upto",n,":",n1)
+    else:
+       print("Fibonacci sequence upto",n,":")
+       while count < n:
+           print(n1,end=' ,')
+           nth = n1 + n2
+           n1 = n2
+           n2 = nth
+           count += 1
+print(Fibonacci(n))
+ 
+QUESTION: 29
+At an airport, a traveler is allowed entry into the ﬂight only if he clears the following checks:
+1.Baggage Check
+2.Immigration Check
+3.Security Check
+The logic for the check methods are given below:
+check_baggage (baggage_weight)
+•.returns True if baggage_weightis greater than or equal to 0 and less than or equal to 40. Otherwise returns False.
+check_immigration (expiry_year)
+•.returns True if expiry_yearis greater than or equal to 2001 and less than or equal to 2025. Otherwise returns False.
+check_security(noc_status)
+•.returns True if noc_statusis 'valid' or 'VALID', for all other values return False.
+traveler()
+•.Initialize the traveler Id and traveler name and invoke the functions check_baggage(), check_immigration() and check_security() by passing required arguments. 
+•.Refer the table below for values of arguments.
+•.If all values of check_baggage(), check_immigration() and check_security() are true, display traveler_id and traveler_name 
+display "Allow Traveler to ﬂy!" Otherwise,display traveler_id and traveler_name
+display "Detain Traveler for Re-checking!“
+Invoke the traveler() function. Modify the values of diﬀerent variables in traveler() function and observe the output.
+
+Solution:29
+def traveller():
+    traveler_name="Sahil Gupta"
+    traveler_id=500678
+    print("Traveler name is",traveler_name)
+    print("Traveler id is",traveler_id)
+def check_baggage(baggage_weight):
+    a="true"
+    b="false"
+    if(baggage_weight>=0 and baggage_weight<=40):
+        return a
+
+    else:
+        return b
+def check_immigration (expiry_year):
+    a="true"
+    b="false"
+    if(expiry_year>=2001 and expiry_year<=2025):
+         return a
+    else:
+         return b
+
+def check_security(noc_status):
+    a="true"
+    b="false"
+    if(noc_status== 'valid' or noc_status=='VALID'):
+         return a
+    else:
+         return b
+def traveller():
+    traveler_name="Jim"
+    traveler_id=1001
+    x=check_baggage(35)
+    y=check_immigration(2019)
+    z=check_security("valid")
+    if(x=="true" and y=="true" and z=="true"):
+        print("Traveler name is",traveler_name)
+        print("Traveler id is",traveler_id)
+        print("Allow traveller to Fly !!!")
+    else:
+        print("Traveler name is",traveler_name)
+        print("Traveler id is",traveler_id)
+        print("Detain Traveler for Rechecking")
+traveller()
+ 
+
+QUESTION: 30
+Consider the pseudo code for generating Fibonacci series using Recursion:
+FIBO (number) 
+1. if (number = 0) then 
+2. return (0)
+3. else if (number = 1) then
+4. return (1)
+5. else 
+6. return FIBO(number - 1) + FIBO(number - 2)
+7. end if 
+Write a program in Python to implement the same using Recursion and execute it in Eclipse. Print appropriate error message if the user enters negative number as input.
+
+Solution:30
+def FIBO (number):
+    if(number<0):
+        return (print("number is not valid"))
+    if (number==0):
+        return (0)
+    elif (number==1):
+        return (1)
+    else:
+        return FIBO(number - 1) + FIBO(number - 2)
+print(FIBO(int(input("enter number"))))
+ 
+
+QUESTION: 31
+Write a Python program to implement the following (Use Recursion):
+1.Print ﬁrst 'n' multiples of 3, where 'n' is taken as an input from the user. The multiples should be printed from ﬁrst to last.
+2.Reverse a string. Print the original and reversed string.
+3.Check if the given string is palindrome. If yes, print "String is palindrome" otherwise print "String is not palindrome".
+
+Solution:1)
+n=int(input("enter value of n:"))
+def mult(n):
+    if n == 1:
+        return 3
+    else:
+        return mult(n-1) + 3
+for i in range(1,n+1):
+    print(mult(i))
+ 
+Solution:2
+string = input("enter a string:")
+def reverse(string): 
+    if len(string) == 0: 
+        return
+    temp = string[0] 
+    reverse(string[1:]) 
+    print(temp, end='')
+print("Original string is:",string)
+reverse(string)
+ 
+Solution:3
+string=input("enter any string:")
+def isPalRec(string,first,last) : 
+    if (first==last): 
+        return True 
+    if (string[first] != string[last]) : 
+        return False
+    if (first < last+ 1) : 
+        return isPalRec(string, first + 1, last - 1); 
+  
+    return True
+  
+def isPalindrome(string) : 
+    n = len(string) 
+    if (n == 0) : 
+        return True
+    return isPalRec(string, 0, n - 1); 
+if (isPalindrome(string)) : 
+    print ("String is Palindrome")
+else : 
+    print ("String is not palindrome")
+ 
+QUESTION: 32
+Write a Python program to:
+1.read a ﬁle.
+2.add backslash (\) before every double quote in the ﬁle contents.
+3.write it to another ﬁle in the same folder.
+4.print the contents of both the ﬁles.
+For example:
+If the ﬁrst ﬁle is 'TestFile1.txt' with text as:
+Jack said, "Hello Pune".
+The output of the ﬁle 'TestFile2.txt' should be:
+Jack said,\"Hello Pune\".
+Solution:32
+f=open("TestFile1.txt","w")
+f.write(input(""))
+f.close()
+
+with open("TestFile1.txt","r")as f1:
+    data=f1.read()
+    with open("TestFile2.txt","w")as f2:
+        for l in f1:
+            f2.write(l)
+        print(f2.write(data.replace('\"', '\\\"')))
+        f2.close()
+f3=open("TestFile2.txt","r")
+print(f3.read())
+f3.close()
+ 
+QUESTION: 33
+Consider a ﬁle 'courses.txt' in D Drive with the following details:
+Write a program to read the ﬁle and store the courses in Python variables as a:
+1)Dictionary ( Sample - {0: 'Java', 1: 'Python', 2:'Javascript' 3: 'PHP'} )
+2)List ( Sample - ['Java', 'Python', 'Javascript', 'PHP'] )
+
+Solution:1)
+f=open("F:\python\courses.txt","w")
+a={0:'Java',1:'Python',2:'Javascript',3:'PHP'}
+f.write(str(a))
+b=['Java','Python','Javascript','PHP']
+f.write(str(b))
+f.close()
+f1=open("F:\python\courses.txt","r")
+print(f1.read())
+f1.close()
+ 
+Solution:2)
+f=open("F:\python\courses.txt","w")
+b=['Java','Python','Javascript','PHP']
+f.write(str(b))
+f.close()
+f1=open("F:\python\courses.txt","r")
+print(f1.read())
+f1.close()
+ 
+QUESTION: 34
+Consider a ﬁle 'student_details.txt' in D Drive with the details of students in ABC institute – student id and name:
+Write a program to read the ﬁle and store the student records in Python variable as:
+1)List of lists
+2)List of dictionaries
+Solution:1)
+f=open("F:\python\student_details.txt","w")
+b=[["ABC",1, "Sarika"], ["ABC",2, "Mahi"], ["ABC",3, "Raavi"], ["ABC",4, "Ravi"]]
+f.write(str(b))
+f.close()
+f1=open("F:\python\student_details.txt","r")
+print(f1.read())
+f1.close()
+ 
+Solution:2)
+f=open("F:\python\student_details.txt","w")
+a=[{1:"Sarika"}, {2:"Mahi"}, {3:"Raavi"}, {4:"Ravi"}]
+f.write(str(a))
+f.close()
+f1=open("F:\python\student_details.txt","r")
+print(f1.read())
+f1.close()
+ 
+
+QUESTION: 35
+Consider a ﬁle 'rhyme.txt' in D Drive with following text:
+Write a Python program to count the words in the ﬁle using a dictionary (use space as a delimiter). Find unique words and the count of their occurrences(ignoring case). Write the output in another ﬁle "words.txt" at the same location.
+
+Solution:35
+f=open("rhyme.txt","w")
+f.write(input(""))
+f.close()
+f1=open("rhyme.txt","r")
+print(f1.read())
+f1.close()
+with open("rhyme.txt","r") as f:
+    words=f.read()
+    wordfreq={}
+    for word in words.replace(',', ' ').split():
+        wordfreq[word] = wordfreq.setdefault(word, 0) + 1
+print(wordfreq)
+st = set(open('rhyme.txt').read().split())
+print(st)
+print(len(st))
+f2=open("words.txt","w")
+f2.write(str(st))
+f2.close()
+ 
+
+
+QUESTION: 37
+You have already created a Python program to implement the following in ﬁle handling section:
+1.read a ﬁle.
+2.add backslash (\) before every double quote in the ﬁle contents.
+3.write it to another ﬁle in the same folder.
+4.print the contents of both the ﬁles.
+Modify your code to implement Exception handling. Print appropriate error messages wherever applicable.
+
+Solution:37
+try:
+    with open("TestFile1.txt","r")as f1:
+        data=f1.read()
+        with open("TestFile2.txt","w")as f2:
+            for l in f1:
+                f2.write(l)
+except IOError:
+            print ("Error: can\'t find file or read data")
+            print(f2.write(data.replace('\"', '\\\"')))
+else:
+            print("Written content in the file successfully")
+            f2.close()
+
+f3 =open("TestFile2.txt","r")
+print(f3.read())
+f3.close()
+ 
+
+
+QUESTION: 39
+Refer to the following Question which you have already executed in Functions section. Modify your code to implement Exception Handling and display appropriate error message wherever applicable.
+At an airport, a traveler is allowed entry into the ﬂight only if he clears the following checks:
+1.Baggage Check
+2.Immigration Check
+3.Security Check
+The logic for the check methods are given below:
+check_baggage (baggage_weight)
+•returns True if baggage_weightis greater than or equal to 0 and less than or equal to 40. Otherwise returns False.
+check_immigration (expiry_year)
+•returns True if expiry_yearis greater than or equal to 2001 and less than or equal to 2025. Otherwise returns False.
+check_security(noc_status)
+•returns True if noc_statusis 'valid' or 'VALID', for all other values return False.
+traveler()
+•Initialize the traveler Id and traveler name and invoke the functions check_baggage(), check_immigration() and check_security() by passing required arguments. 
+•Refer the table below for values of arguments.
+•If all values of check_baggage(), check_immigration() and check_security() are true, display traveler_id and traveler_name 
+display "Allow Traveler to ﬂy!" 
+Otherwise,
+display traveler_id and traveler_name
+display "Detain Traveler for Re-checking!“
+Invoke the traveler() function. Modify the values of diﬀerent variables in traveler() function and observe the output
+
+Solution:39
+def traveller():
+    traveler_name=input("Enter traveler name ")
+    traveler_id=int(input("Enter traveler id  "))
+    print("Traveler name is",traveler_name)
+    print("Traveler id is",traveler_id)
+def check_baggage(baggage_weight):
+    try :
+            a="true"
+            b="false"
+            if(baggage_weight>=0 and baggage_weight<=40):
+                return a
+            else:
+                return b
+    except ValueError:
+            print("Value Error")
+    else:
+            print("Over weight , pay extra charge")
+def check_immigration (expiry_year):
+    a="true"
+    b="false"
+    if(expiry_year>=2001 and expiry_year<=2025):
+            return a
+    else:
+            return b
+
+def check_security(noc_status):
+    a="true"
+    b="false"
+    if(noc_status== 'valid' or noc_status=='VALID'):
+        return a
+    else:
+        return b
+def traveller():
+    traveler_name="Jim"
+    traveler_id=1001
+    x=check_baggage(50)
+    y=check_immigration(2019)
+    z=check_security("valid")
+    if(x=="true" and y=="true" and z=="true"):
+            print("Traveler name is",traveler_name)
+            print("Traveler id is",traveler_id)
+            print("Allow traveller to Fly !!!")
+    else:
+            print("Traveler name is",traveler_name)
+            print("Traveler id is",traveler_id)
+            print("Detain Traveler for Rechecking")
+traveller()
+ 
+QUESTION: 41
+•Write a Python program to randomly print any of the below numbers:
+100,200,300,400,500,600,700,800,900,1000
+Execute the program 10 times and verify if the number generated in every output is one out of the numbers given in the list above. 
+•Write a Python program to print a random odd numbers between 10 and 50.	
+
+Solution:41
+1.
+import random
+l=[100,200,300,400,500,600,700,800,900,1000]
+for i in range(10):
+    a=(random.choice([100,200,300,400,500,600,700,800,900,1000]))
+    if(a in l):
+        print(a)
+        print("Number is from the given list")
+ 
+
+2.
+import random
+random_number =random.randrange(11,50,2)
+print(random_number )
+ 
+QUESTION: 42
+Write a Python program for rolling a dice on clicking enter key. The program should run inﬁnitely until user enters 'q'. 
+Solution:
+import random
+
+while(1):
+    a=input("Enter any string")
+    if(a=='q'):
+        break
+    else:
+        print(random.randint(1,7))
+ 
+QUESTION: 43
+If area of one wall of a cubical wooden box is 16 units, write a Python program to display the volume of the box. 
+Note: 
+Area of a cube with side 'a' is 'a**2'.
+Volume of the cube can be computed as 'a**3'.
+Solution:
+a=16**(1/2)
+volume=a**3
+print("Volume of cube is",volume)
+ 
+QUESTION: 44
+The ABC Institute oﬀers vocational courses to students in multiple areas e.g. theatre, classical singing, traditional dance forms, Bollywood dance, literature and so on. A student can enroll for zero to all courses. 
+Write a Python function that takes the number of courses as an input and returns the total number of diﬀerent course combinations, a student can opt for. (Make use of functions available in math module)
+
+Solution:
+from itertools import permutations
+n=int(input("Enter total number of courses"))
+l=[]
+for i in range(1,n+1):
+    l.append(i)
+for i in range(n+1):
+    perm=permutations(l,i)
+    for i in list(perm):
+        print(i)
+ 
+QUESTION: 45
+Execute the following code and observe the output.
+1.import time
+2.print(time.time())
+3.print(time.localtime())
+4.print(time.localtime(time.time()))
+5.print(time.asctime())
+6.mytime = (2016,7,27,15,45,23,0,0,0)
+7.print(time.localtime(time.mktime(mytime)))
+
+Solution:
+import time
+print(time.time())
+print(time.localtime())
+print(time.localtime(time.time()))
+print(time.asctime())
+mytime = (2016,7,27,15,45,23,0,0,0)
+print(time.localtime(time.mktime(mytime)))
+ 
+QUESTION: 46
+Consider a Python string:
+cust_details = "Hello John, your customer id is j181"
+1)Find, if the name of the customer is preceded by a pattern "Hello " or "hello " (Observe a space after the word)? If pattern is found, print the searched result.
+2)Find, if the given string ends with a pattern containing only one alphabet followed by three numbers? If pattern is found, print the searched result.
+3)Replace the word starting with "j" followed by three numbers to only the number(remove the alphabet).
+4)Replace the word "id" with "ID".
+The output of the above code is "
+Hello John, your customer ID is 181
+"
+Hint:
+In questions 1 and 2 use search() function. The matched object can be returned using group() function of match 
+object.
+Use sub() function in question 3 and 4.
+Solution:
+import re
+cust_details = "Hello John, your customer id is j181"
+if re.search("Hello",cust_details):
+    print("Hello John, your customer id is j181")
+else:
+    print("not correct")
+if re.search("j181",cust_details):
+    print(cust_details)
+p=re.sub("j181","181",cust_details)
+print(p)
+q=re.sub("id","ID",cust_details)
+print(q)
+ 
+
+QUESTION: 47
+Consider a scenario of managing student details in ABC Training Institute. Write a Python program to implement the business requirements mentioned below:
+a)Accept student_id and validate whether it contains only digits.
+b)If student _id is valid, accept student_name from the user and validate whether it contains only alphabets.
+c)If student_name is valid, accept fees_amount paid by the student:
+1.Decimal point is optional in fees_amount(can have maximum one decimal point)
+2.Only two digits are allowed after decimal point
+d)If invalid data is entered in any of the above steps, display appropriate error messages. Else, create an email_id for student as student_name@ABC.com
+. Assume there are no duplicate names.
+e)Perform above validations using Regular Expressions and print details of the student: student_id, student_name, fees_amount, email_id
+
+
+
+Solution:
+
+sid=input("enter the id :")
+c=0	
+for i in range(len(sid)):
+    if(sid[i]>="0" and sid[i]<="9"):
+        continue
+    else:
+        c=c+1     
+        break
+if(c==1):
+    print("invalid  student id")
+else:
+    print("valid id")
+    sname=input("enter the name: ")
+    for i in range(len(sname)):
+        if(sname[i]>="a" and sname[i]<="z" or sname[i]>="A" and sname[i]<="Z"):
+            continue
+        else:
+            c=c+1
+            break
+    if(c==2):
+            print("name is invalid")
+    else:
+            print("student name is valid :")
+            fees=input("enter the fees :")
+            c=0
+            x=0
+            for i in range(len(fees)):
+                if(fees[i]=="."):
+                    c=c+1
+                    x=i
+            if(c>1):
+                print("invalid fees1")
+            elif(c==0):
+                print("valid fees :")
+                semail=sname+"@ABC.com"
+                print("student id :",sid)
+                print("student name :",sname)
+                print("student fees :", fees)
+                print("studen emailid :",semail)
+            if((len(fees)-x)==3):
+                print("valid fees")
+                semail=sname+"@ABC.com"
+                print("student id :",sid)
+                print("student name :",sname)
+                print("student fees :", fees)
+                print("studen emailid :",semail)
+            else:
+                print("invalid fees")
+ 
+QUESTION: 48
+Consider a string:
+my_string = “””Strings are amongst the most popular data types in Python. We can create the strings by enclosing characters in quotes. Python treats single quotes the same as double quotes.”””
+1) Write a Python program to count the number of occurrences of word "String" in the given string ignoring the 
+case.
+2) Write a function "count_words" to print the count of occurrences of a word: 
+a) which end with "on". (e.g. Python)
+b) which have "on" in between the ﬁrst and last characters (e.g. amongst)
+
+Solution:48
+my_string=input()
+l=my_string.split()
+print(l)
+print("the no occurcence of the word String is :",l.count("String"))
+for i in range(len(l)):
+    x=l[i]
+    f=l.count(l[i])
+    print(x,":",f)
+def count_words(string):
+    for i in string.split():
+        if i.endswith("on") == True:
+            print(i,":",string.count(i))
+count_words(my_string)
+ 
+QUESTION: 49
+Consider the price list of various items in the Retail Store: 
+item_price = [1050, 2200, 8575, 485, 234, 150, 399]
+Customer John wants to know the:
+1.Price of costliest item sold in retail store
+2.Number of items in the Retail store
+3.Prices of items in increasing order
+4.Prices of items in descending order
+Implement the above mentioned business requirements using built-in List functions.
+Hint – 
+1) Use max, len, sort functions of math module.
+2) For question 3 and 4, display the list in increasing/decreasing order.
+
+Solution:
+item_price = [1050, 2200, 8575, 485, 234, 150, 399]
+p=max(item_price)
+print("The price of the costliest item :",p)
+l=len(item_price)
+print("The number of items in the retail store :",l)
+item_price.sort()
+print("the items of Ascending order :",item_price)
+item_price.reverse()
+print("the items of Dscending order :",item_price)
+ 
+
+QUESTION: 50
+Built-in function in Python which accepts any data structure (list, string, tuple, and set) and returns a sorted list.
+                        
+Solution:
+#sorting a list
+l=[52,4,6,7,2,1]
+l.sort()
+print(l)
+#sort a string
+str1=input("enter the string :")
+l=str1.split()
+l.sort()
+print(l)
+
+#sorting a tuple
+
+t=(3, 6, 8, 2, 78, 1, 23, 45, 9)
+print(sorted(t))
+ 
+
+#sorting a set
+
+s = set(['0.000000000', '0.009518000', '10.277200999', '0.030810999', '0.018384000', '4.918560000'])
+sorted(s)
+ 
